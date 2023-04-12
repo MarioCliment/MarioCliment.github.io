@@ -1,12 +1,13 @@
 :root{
     color: #bab3b7;
     color: #686868;
-    color: #853f64;
-    --colorHover: #a73d5e;
+    --detalles1: #4DA3A3;
+    --colorHoverd1: #4DA3A3;
     color: #BF3B5A;
     color: #5E4169;
     color: #3c466b;
     color: black;
+    --menuBackgroundColor: #313336;
     --headerBackgroundColor: #26282B;
     --backgroundColor: #1d2024;
 }
@@ -199,7 +200,7 @@ button{
 
 
 .hover .link-menu:hover {
-    background: var(--colorHover);
+    background: var(--colorHoverd1);
 }
 
 
@@ -236,7 +237,7 @@ button{
         display: none;
         width: 100%;
         position: absolute;
-        background-color: #222b;
+        background-color: var(--menuBackgroundColor);
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
@@ -332,7 +333,7 @@ footer{
 }
 .footer{
     width: 100%;
-    background-color: #bab3b7;
+    background-color: var(--headerBackgroundColor);;
 }
 .footer .footer-group-1{
     width: 100%;
@@ -365,7 +366,7 @@ footer{
 
 .footer .footer-group-1 .footer-box .footer-list .item-footer-list a{
     font-family: "Romanica", sans-serif;
-    color: #686868;
+    color: white;
     margin: 1em 0;
     text-decoration: none;
     /*padding: 5px;*/
