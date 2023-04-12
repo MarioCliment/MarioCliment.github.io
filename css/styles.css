@@ -105,7 +105,7 @@ button{
 }
 
 .logoBox{
- display: flex;
+    display: flex;
 }
 
 .transition{
@@ -135,8 +135,7 @@ button{
 
 .mLogo{
     width: 100%;
-    max-width: 100px;
-
+    max-width: 48px;
 }
 
 /*/////////////////////////////////////////////////////////////////*/
@@ -153,13 +152,12 @@ button{
 .logo-nav-bar{
 
     display: flex;
-    position: relative;
+
     z-index: 4;
 
-    padding: 20px;
+    /*padding: 20px;*/
     color: black;
     width: 100%;
-    font-size: 1.5em;
     position: relative;
 }
 
@@ -167,6 +165,7 @@ button{
 .general-nav-bar {
     background-color: var(--headerBackgroundColor);
     display: flex;
+    margin-left: 28px;
 }
 .nav-bar {
     
@@ -260,16 +259,11 @@ button{
 
     .main-nav {
         margin-right: 28px;
-        display: flex;
+        display: block;
         justify-content: center;
         align-items: center;
     }
 
-    .logo-nav-bar {
-        display: flex;
-        margin-left: 28px;
-        padding-left: 0;
-    }
 
     #menuBtn {
         display: none;
