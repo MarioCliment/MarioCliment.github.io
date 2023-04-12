@@ -1,13 +1,14 @@
-.colors{
+:root{
     color: #bab3b7;
     color: #686868;
     color: #853f64;
-    color: #a73d5e;
+    --colorHover: #a73d5e;
     color: #BF3B5A;
     color: #5E4169;
     color: #3c466b;
     color: black;
-    color: white;
+    --headerBackgroundColor: #26282B;
+    --backgroundColor: #1d2024;
 }
 
 
@@ -50,11 +51,14 @@ img{
 }
 body{
     margin: 0;
+    background-color: var(--backgroundColor);
 }
 
 .header {
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 3;
+    background-color: var(--headerBackgroundColor);
 }
 h1{
     font-family: "HeavyRain", sans-serif;
@@ -91,6 +95,22 @@ small{
     font-family: "TypoFormal", Arial;
 }
 
+button{
+   padding: 0%;
+}
+
+.allContent{
+    padding: 16px;  
+}
+
+.logoBox{
+ display: flex;
+}
+
+.transition{
+    transition: all 0.5s;
+}
+
 /*/////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////ICONS//////////////////////////////*/
 /*/////////////////////////////////////////////////////////////////*/
@@ -100,14 +120,21 @@ small{
     border: none;
     background: none;
     cursor: pointer;
+    padding: 0%;
 }
 
 #menuBtn{
-    /*transform: translate(1150%,0%);*/
-    display: flex;
+    padding: 0%;
 }
+
+.menu-icon{
+    width: 48px;
+    height: 48px;
+}
+
 .mLogo{
-    max-width: 200px;
+    width: 100%;
+    max-width: 100px;
 
 }
 
@@ -123,20 +150,28 @@ small{
 /*//////////////////////////////MENU///////////////////////////////*/
 /*/////////////////////////////////////////////////////////////////*/
 .logo-nav-bar{
-    background: white;
-    display: block;
+
+    display: flex;
     position: relative;
     z-index: 4;
+
+    padding: 20px;
+    color: black;
+    width: 100%;
+    font-size: 1.5em;
+    position: relative;
 }
 
+
 .general-nav-bar {
+    background-color: var(--headerBackgroundColor);
     display: flex;
 }
 .nav-bar {
-    background: white;
+    
     padding: 20px;
     display: block;
-    color: black;
+    color: red;
     width: 100%;
     font-size: 1.5em;
     position: relative;
@@ -149,10 +184,9 @@ small{
     padding: 0;
 }
 
-.menu {
-    background: #bab3b7;
+.menu {  
     width: 100%;
-    margin-top: -145%;
+    /*margin-top: -145%;*/
 }
 
 .link-menu {
@@ -165,47 +199,20 @@ small{
 
 
 .hover .link-menu:hover {
-    background: #a73d5e;
+    background: var(--colorHover);
 }
 
-
-.submenu .link-menu:hover {
-    background: #a73d5e;
-}
-
-.submenu {
-    height: 0;
-    overflow: hidden;
-    transition: all 0.2s;
-
-}
-
-.submenu .link-menu {
-    background: #686868;
-    padding-left: 50px;
-}
-
-.show{
-    margin-top: 0;
-}
 
 .dissapear{
     display: none;
-}
-.menu .contacto{
-    background-color: #a73d5e;
-}
-.menu .inicio-sesion{
-    background-color: #3c466b;
 }
 
 .item-menu{
     cursor: pointer;
 }
 
-.transicion{
-    transition: all 0.5s;
-}
+
+
 /*/////////////////////////////////////////////////////////////////*/
 /*///////////////////////////MENU END//////////////////////////////*/
 /*/////////////////////////////////////////////////////////////////*/
@@ -217,12 +224,30 @@ small{
 /*/////////////////////////////////////////////////////////////////*/
 
 @media (max-width: 1024px) {
-    header{
-        margin-bottom: 93px;
-    }
     .nav-bar {
         display: flex;
         justify-content: right;
+    }
+    .mLogo{
+        width: 100%;
+        max-width: 48px;
+    }
+    .main-nav {
+        display: none;
+        width: 100%;
+        position: absolute;
+        background-color: #222b;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .general-nav-bar{
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .show{
+        display: block;
     }
 }
 
@@ -239,13 +264,18 @@ small{
         align-items: center;
     }
 
+    .logo-nav-bar {
+        display: flex;
+        margin-left: 28px;
+        padding-left: 0;
+    }
 
     #menuBtn {
         display: none;
     }
 
     .menu {
-        background: white;
+        /*background: white;*/
         margin-top: 0;
         display: flex;
         justify-content: right;
@@ -268,33 +298,16 @@ small{
     .link-menu:hover {
         color: #FFFFFF;
     }
-    .item-menu:hover .link-menu{
-        color: #FFFFFF;
-    }
 
     .item-menu{
         border-radius: 25px;
     }
 
+    
 
-    .submenu .link-menu {
-        padding-left: 25%;
-    }
 
-    .submenu {
-        margin-top: 7px;
-        position: absolute;
-        top: 30px;
-        width: 150px;
-        overflow: visible;
-        z-index: 1000;
-        opacity: 0;
-        visibility: hidden;
-    }
 
-    .menu .contacto{
-        background-color: transparent;
-    }
+
 }
 
 /*/////////////////////////////////////////////////////////////////*/
